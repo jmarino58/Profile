@@ -1,0 +1,513 @@
+/*CSS Reset / Normalize*/
+/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
+en las secciones señaladas */
+/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
+coloque nas sessões indicadas*/
+
+:root{
+    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
+    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+   --cor-de-fundo:#F1F1F1;
+   --cor-de-subtitle:#abbd08a2;
+   --cor-de-link: #000;
+   --cor-de-borde:#E3E4E5;
+   --cor-de-menu:#0000FF;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    
+}
+ol, ul,li {
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-fundo);
+}
+
+/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
+
+Lo que es el BEM?
+
+BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
+desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
+independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
+con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
+
+Enlace de la documentación oficial!
+https://en.bem.info/methodology/quick-start/*/
+
+
+
+
+
+.preloader{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0.80;
+    /*background: linear-gradient(rgb(91, 89, 121) 25%, rgb(43, 42, 110) 50%, rgb(33, 30, 73) 100%);*/
+    z-index:-1;
+}
+
+.preloader__span{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity: 0.80;
+    background: linear-gradient(rgba(170, 170, 172, 0.911) 0%, rgb(70, 70, 69) 25%, rgb(2, 1, 39) 75%, rgb(0, 0, 0) 100%);
+    z-index:1;
+}
+
+
+.video{
+   position:fixed;
+   top:0;
+   left:0;
+   right:0;
+   bottom:0;
+   z-index:-2;
+   width: 200%;
+   opacity:0.75;
+   
+}
+/*Sección Menu*/
+.menu__container {
+    top:60%;
+    display:none;
+    position: fixed; 
+    z-index: 99; 
+    }
+
+
+.menu{
+    position:fixed;
+    top:92%;
+    left:2%;
+    z-index:99;
+}
+
+.menu__list{
+    flex-direction: column-reverse;
+    margin-left:16px;
+    margin-bottom: 1rem;
+    width: auto;
+}
+
+.menu__list__item *{
+    padding-top: 10px;
+    color:var(--cor-de-link);
+    justify-content: center;
+}
+
+.menu__list__item:hover .item{
+    color: var(--cor-de-menu);
+    visibility: visible;
+}
+
+.tooltiptext{
+  position:relative;
+  visibility: hidden;
+  width: 30px;
+  margin-left: 1rem;
+  background-color: transparent;
+  color: #fff;
+}
+
+.menu__list__item:hover .tooltiptext{
+    visibility:visible;
+}
+
+
+.top__button{
+    border:1px var(--cor-de-menu) solid;
+    border-radius:60px;
+    color:var(--cor-de-menu);
+    padding:18px 20px;
+}
+
+
+/*Sección Title*/
+.title__div{
+    display:flex;
+
+}
+.title__container{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway';
+       
+
+}
+.title__bio{
+    
+    color:var(--cor-de-fundo);
+    text-align: center;
+    font-size: 50px;    
+    line-height:1;
+    text-shadow:1px 0px 0px var(--cor-de-subtitle);
+    margin-bottom: 1rem;
+    
+}
+
+.title__subsection{
+    color:var(--cor-de-fundo);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:0px 0px 10px var(--cor-de-link);
+    text-align: center;
+    font-size: 30px;
+    line-height: 1;
+
+}
+
+.title__epigrafe{
+
+    color:var(--cor-de-fundo);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:1px 1px 15px var(--cor-de-borde);
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.5;
+}
+
+.title__profile{
+    margin:2rem 0 0 8rem;
+    width:300px;
+    height: 300px;
+}
+
+.title__nombre{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color:var(--cor-de-link);
+    text-shadow:1px 3px 0px var(--cor-de-fundo);
+    text-align: center;
+}
+
+.title__network{
+    font-size:48px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+.title__network__item{
+    width: 50px;
+    height: 50px;
+    margin: 4px;
+    line-height: 50px;
+    text-align: center;
+    background:linear-gradient(rgb(29, 39, 185) 0%, rgb(29, 39, 185) 35%, rgb(0, 3, 19) 100%);
+    filter:brightness(1.75);
+    
+}
+.title__network__item:hover{
+    color: rgba(118, 131, 182, 0.8);
+    
+    border: 1px solid white;
+}
+
+.icons *{
+    display:inline-block;
+    font:normal normal normal 40px/1 FontAwesome;
+    color:rgb(255, 255, 255);
+    text-rendering: auto;
+}
+
+.icons:hover{
+    color:var(--cor-de-link);
+}
+
+/*Sección About*/
+
+.about__container{
+    color:var(--cor-de-fundo);
+    padding:1px 0px 2px 18px;
+    box-shadow: 0px 2px 20px 0px rgba(250, 248, 248, 1);
+
+}
+
+.about__paragraph{
+    
+    font-size: 30px;
+    padding-right:2rem;
+    padding-left:2rem;
+    line-height: 1.8;
+    font-family:'Raleway';
+    text-align: justify; 
+    text-shadow:1px 2px 0px var(--cor-de-link);
+}
+
+.about__title, .skills__title, .hobbies__title, .academic__title, .experience__section__title,.formcontato__title{
+
+        color:var(--cor-de-link);
+        font-size: 40px;
+        font-family: 'Times New Roman';
+        text-align:center;
+        text-shadow:1px 1px 0px var(--cor-de-fundo);
+}   
+   
+   
+
+
+.skills__line,.hobbies__line,.academic__courses{
+    display:flex;
+    padding: 2px 5px;
+    justify-content:space-around;
+    box-shadow: 2px 2px 10px 0px rgba(0, 102, 255, 0.8);
+    
+}
+
+.skills__box__element,.hobbies__box__element{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    width:100px;
+    height:100px;
+
+    color:var(--cor-de-fundo);
+    
+    object-fit:cover;
+    margin:5px;
+}
+
+
+.academic__courses__list{
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    object-fit: contain;
+    height:250px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* experiencia*/
+
+
+.experience__info{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 8px 0 rgba(0,0,0,0.8);
+    padding:2rem;
+    margin:2rem;
+    color:var(--cor-de-link);
+    
+}
+.experience__img{
+    width:80vw;
+    margin-bottom: 2rem;
+}
+
+.expirience__description{
+    position:relative;
+	box-sizing: border-box;
+	border-color:#ffffff;
+	border-radius: 12px;
+	border-width:2px;
+	font-family: 'Inter';
+	font-style: normal;
+	text-align: center;
+	background:#FFFFFF55;
+}
+
+
+
+
+/*Contacto*/
+.formcontato__img{
+    
+    padding:1px;
+    margin:1em;
+    box-shadow: 2px 2px 2px 2px rgba(19, 3, 238, 0.8);
+}
+.formcontato__contacto{
+    display:flex;
+    box-sizing: border-box;  
+}
+
+.formcontato__subtext{
+    color:var(--cor-de-link);
+    
+}
+
+.formcontato__form{
+    display:flex;
+    flex-direction: column;
+    gap:1.5rem;
+     
+}
+.formcontato__input{
+    width:100%;    
+    min-height: 2rem;
+}
+
+.formcontato__textarea{
+    width:100%;
+}
+
+.input--error{
+    display:block;
+    margin-top: 0.1rem;
+    padding-left: 0.5rem;
+    font-size: 0.85rem;
+    color: red;
+}
+
+
+.formcontato__botao{
+    width:120px;
+    height:40px;
+       
+    border-radius: 15px;
+    border-color: rgba(255, 1, 1, 1);
+    
+}
+
+
+/*footer*/
+
+section.footer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(4, 0, 255);
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgb(250, 250, 250), 0 0 1em rgb(207, 206, 206), 0 0 0.2em rgb(233, 233, 233);
+    
+
+}
+
+
+.formcontato__send{
+    width:400px;
+    box-shadow: 2px 2px 40px 0px rgba(0, 102, 255, 0.8);
+    border-radius: 6px;
+    position:relative;
+    top:-300px;
+    left:40%;
+    transform: scale(0.01);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;  
+    background: var(--cor-de-fundo); 
+    transition: transform 0.6s, top 0.4s;
+    visibility: hidden;
+    
+    
+    
+  }
+  
+  .formcontato__send--open{
+    visibility: visible;
+    
+    transform: scale(1);
+  }
+
+
+
+    
+  
+  
+  
+  .formcontato__send__img {
+    width:100px;
+    margin-top:-70px;
+    border-radius:50%;
+    content:url("assets/check-icon.png");
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+  }
+  
+  .formcontato__send__text {
+    font-weight: 500;
+    margin: 10px 0 20px;  
+  }
+  
+  .formcontato__send__buttom{
+    width:30%;
+    padding:5px;
+    background: rgba(0, 102, 255, 0.8);
+    outline:none;
+    border:1px white solid;
+    font-size:18px;
+    border-radius: 6px;
+    cursor:pointer;
+  }
+
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+/* Menú */
+
+/*title*/
+
+/*Skills*/
+
+/*Hobbies*/
+
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+/*Menu*/
+
+/*Titulo*/
+
+/*Sección sobre mi*/
+
+/*Skills*/
+
+/*Hobbies*/
+ 
+/*Formación Académica*/
+
+/*Experiencia Profesional*/
+
+ /*Contacto*/
+
+/*Footer*/
+
+}

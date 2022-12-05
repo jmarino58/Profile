@@ -1,6 +1,7 @@
 popup= document.getElementById("formcontato__send");
 
 
+
 function openPopUp(){
     //window.location.href="./contacto_enviado.html";
     
@@ -15,11 +16,32 @@ function closePopUp(){
     
 }
 
-function mostrar(){
+function mostrar(event){
+    
+    
     const menu = document.getElementById("menu__container");
     menu.style.display="block";
     setTimeout(() => { 
-         menu.style.display="none"; }, 5000);
+         menu.style.display="none"; }, 2000);
+    }
+
+function touchStart(evento){
+    mostrar(evento)
+    
+    }
 
 
-}
+
+
+
+
+
+
+
+
+         
+
+
+
+  
+

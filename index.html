@@ -58,7 +58,10 @@
         </nav>
         
     </div>
-    <a class="top__button" href="#tudo" onmouseenter="mostrar()"><i class="fas fa-angle-double-up fa-lg"></i></a>
+    <div class="menu__buttons">
+    <a class="menu__button" onmouseenter="mostrar(event)" ontouchstart="touchStart(event)"><i class="fas fa-bars fa-lg"></i></a>
+    <a class="top__button" href="#tudo"><i class="fas fa-angle-double-up fa-lg"></i></a>
+    </div> 
 </section>
     
         
@@ -76,15 +79,22 @@
                 
             </div>
             <div class="title__container">
-                <h2  class="title__bio">Jorge Marino, </h2>
-                <h3 class="title__subsection">Diseñador de sitios Web <br>y<br>Aplicaciones Mobile<br><br><br>Docente, Entrenador, Asesor en Transformación Digital</h3>
-                <h4 class="title__epigrafe">Tengo formación en Desarrollo Mobile y Web, actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h4>
+                <h2  class="title__bio">Jorge Marino</h2>
+                <h3 class="title__subsection">Docente, Entrenador <br><br> Diseñador de sitios Web <br>y<br>Aplicaciones Mobile</h3>
+            
+            </div>
+            <div class="title__network__container">
+                <h4 class="title__epigrafe">Tengo formación en Desarrollo Mobile y Web, actualmente estoy participando del <br> proyecto Oracle ONE en Alura Latam.</h4>            
+                <div>
                 <ul class="title__network">
-                     <!-- Pon los enlaces de tus redes sociales favoritas -->
+            
+                    <!-- Pon los enlaces de tus redes sociales favoritas -->
                     <li class="title__network__item"><a href=""><i class="fab fa-github icons"> </i></a></li>
                     <li class="title__network__item"><a href="https://www.linkedin.com/in/jorge-marino/" target="blank"><i  class="fab fa-linkedin icons"></i></a></li>
                 </ul>
-            </div>
+                </div>
+            </div>           
+               
         </div>
     </section>
     
@@ -391,7 +401,7 @@
         <section class="footer">
             <div class="footer__rodape">
                 <p>Desarrollado por Jorge Marino</p>
-                <p>2022</p>
+                <p>&copy; 2022 - jm58@live.com.ar</p>
             </div>
         </section>
     

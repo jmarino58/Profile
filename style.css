@@ -8,7 +8,7 @@ coloque nas sessões indicadas*/
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo:#F1F1F1;
-   --cor-de-subtitle:#abbd08a2;
+   --cor-de-subtitle:#0de3ffe8;
    --cor-de-link: #000;
    --cor-de-borde:#E3E4E5;
    --cor-de-menu:#0000FF;
@@ -85,16 +85,17 @@ https://en.bem.info/methodology/quick-start/*/
 }
 /*Sección Menu*/
 .menu__container {
-    top:60%;
+    top:5rem;
     display:none;
-    position: fixed; 
+    position: fixed;
+    background-color: rgba(22, 21, 21, 1);
     z-index: 99; 
     }
 
 
 .menu{
     position:fixed;
-    top:92%;
+    top:2%;
     left:2%;
     z-index:99;
 }
@@ -107,87 +108,91 @@ https://en.bem.info/methodology/quick-start/*/
 }
 
 .menu__list__item *{
-    padding-top: 10px;
-    color:var(--cor-de-link);
+    padding: 10px 4px;
+    color:var(--cor-de-fundo);
     justify-content: center;
 }
 
-.menu__list__item:hover .item{
+.menu__list__item:hover *{ 
     color: var(--cor-de-menu);
     visibility: visible;
 }
 
 .tooltiptext{
   position:relative;
-  visibility: hidden;
+  
   width: 30px;
   margin-left: 1rem;
   background-color: transparent;
-  color: #fff;
+  color: var(--cor-de-fundo);
 }
 
-.menu__list__item:hover .tooltiptext{
-    visibility:visible;
+.menu__buttons{
+    display:flex;
+    position:fixed;
+    height:95vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
 }
-
 
 .top__button{
-    border:1px var(--cor-de-menu) solid;
+    border: 1px var(--cor-de-link) solid;
     border-radius:60px;
-    color:var(--cor-de-menu);
+    color:var(--cor-de-link);
     padding:18px 20px;
+    
 }
 
+
+.menu__button{
+    
+    border: 1px var(--cor-de-borde) solid;
+    color:var(--cor-de-link);
+    padding:18px 20px;
+    
+}
 
 /*Sección Title*/
 .title__div{
-    display:flex;
-
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin:0 1rem 0 1rem; 
+  object-fit: contain;  
+    
 }
 .title__container{
-    display: flex;
-    flex-direction: column;
-    font-family: 'Raleway';
-       
-
+    margin: 1rem 5rem 0 2rem;;
 }
 .title__bio{
-    
     color:var(--cor-de-fundo);
     text-align: center;
     font-size: 50px;    
     line-height:1;
-    text-shadow:1px 0px 0px var(--cor-de-subtitle);
+   text-shadow:2px 0px 5px var(--cor-de-subtitle);
     margin-bottom: 1rem;
-    
 }
 
 .title__subsection{
     color:var(--cor-de-fundo);
     font-style: italic;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow:0px 0px 10px var(--cor-de-link);
+    text-shadow:10px 5px 5px var(--cor-de-link);
     text-align: center;
     font-size: 30px;
     line-height: 1;
-
 }
-
-.title__epigrafe{
-
-    color:var(--cor-de-fundo);
-    font-style: italic;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow:1px 1px 15px var(--cor-de-borde);
-    text-align: center;
-    font-size: 28px;
-    line-height: 1.5;
+.title__profile__container{
+    margin:2rem 10rem 0 0rem;
 }
 
 .title__profile{
-    margin:2rem 0 0 8rem;
+    
     width:300px;
-    height: 300px;
+    height:300px;
+    border-radius: 300px;
 }
 
 .title__nombre{
@@ -196,29 +201,47 @@ https://en.bem.info/methodology/quick-start/*/
     color:var(--cor-de-link);
     text-shadow:1px 3px 0px var(--cor-de-fundo);
     text-align: center;
+    
+}
+
+.title__network__container{
+    width:100%;
+    margin-top:0rem;
+    margin-bottom:1rem;
+    
+}
+
+.title__epigrafe{
+    color:var(--cor-de-fundo);
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow:1px 0px 2px var(--cor-de-borde);
+    align-items: center;
+    font-size: 28px;
+    line-height: 1.5;
+    justify-content: center;
+    text-align: center;
 }
 
 .title__network{
     font-size:48px;
-    display: flex;
-    justify-content: center;
+    display:flex;
     margin-top: 2rem;
-    
+    box-sizing: content-box;
+    justify-content: center;
 }
 .title__network__item{
-    width: 50px;
     height: 50px;
-    margin: 4px;
-    line-height: 50px;
-    text-align: center;
+    
     background:linear-gradient(rgb(29, 39, 185) 0%, rgb(29, 39, 185) 35%, rgb(0, 3, 19) 100%);
     filter:brightness(1.75);
-    
+    margin: 1rem;
 }
+
 .title__network__item:hover{
     color: rgba(118, 131, 182, 0.8);
-    
     border: 1px solid white;
+    
 }
 
 .icons *{
@@ -226,6 +249,7 @@ https://en.bem.info/methodology/quick-start/*/
     font:normal normal normal 40px/1 FontAwesome;
     color:rgb(255, 255, 255);
     text-rendering: auto;
+    
 }
 
 .icons:hover{
@@ -253,7 +277,6 @@ https://en.bem.info/methodology/quick-start/*/
 }
 
 .about__title, .skills__title, .hobbies__title, .academic__title, .experience__section__title,.formcontato__title{
-
         color:var(--cor-de-link);
         font-size: 40px;
         font-family: 'Times New Roman';
@@ -261,56 +284,46 @@ https://en.bem.info/methodology/quick-start/*/
         text-shadow:1px 1px 0px var(--cor-de-fundo);
 }   
    
-   
-
-
-.skills__line,.hobbies__line,.academic__courses{
+ .skills__line,.hobbies__line,.academic__courses{
     display:flex;
-    padding: 2px 5px;
-    justify-content:space-around;
-    box-shadow: 2px 2px 10px 0px rgba(0, 102, 255, 0.8);
-    
+    flex-wrap: wrap;
+    padding: 5px;
+    margin:10px;
+    box-shadow: 2px 2px 10px 3px rgba(0, 102, 255, 0.9);
+    justify-content: center;
 }
 
 .skills__box__element,.hobbies__box__element{
     display:flex;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
-    justify-content: center;
+    box-shadow: 1px 3px 4px 2px rgba(255, 255, 255, 0.8);
+    justify-content: space-around;
     align-items: center;
     gap:2rem;
-    width:100px;
-    height:100px;
-
+    width:150px;
+    height:150px;
     color:var(--cor-de-fundo);
-    
     object-fit:cover;
-    margin:5px;
+    margin:3rem;
+    background:linear-gradient(#212122,#9198e5);
 }
 
 
-.academic__courses__list{
+.academic__courses__box{
+    background:var(--cor-de-fundo);
     display:flex;
-    flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding:2px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
-    object-fit: contain;
-    height:250px;
+    justify-content: space-around;
+    align-items: center;
+    /*gap:2;*/
+    width:auto;
+    height:auto;
+    padding:5px;
+    object-fit: cover;
     text-align: center;
+    margin:5rem;
 }
-
-
-
-
-
-
-
-
-
-
 /* experiencia*/
 
 
@@ -346,27 +359,38 @@ https://en.bem.info/methodology/quick-start/*/
 
 
 /*Contacto*/
-.formcontato__img{
-    
-    padding:1px;
-    margin:1em;
-    box-shadow: 2px 2px 2px 2px rgba(19, 3, 238, 0.8);
+.formcontato__title{
+    margin:0px;
 }
 .formcontato__contacto{
-    display:flex;
-    box-sizing: border-box;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.formcontato--esquerda{
+    width:60%;
+    margin-top:5rem;
+    margin-right:1rem;
+}
+
+.formcontato__img{
+    width:80%;
+    height:80%;
+}
 .formcontato__subtext{
-    color:var(--cor-de-link);
-    
+    text-shadow:1px 1px 0px var(--cor-de-link);
+    color:var(--cor-de-fundo);
+    text-align: justify;
+    margin:0 1rem 0 1rem
 }
 
 .formcontato__form{
     display:flex;
     flex-direction: column;
+    
     gap:1.5rem;
-     
+    margin:0 1rem 0 1rem;     
 }
 .formcontato__input{
     width:100%;    
@@ -400,10 +424,10 @@ https://en.bem.info/methodology/quick-start/*/
 
 section.footer{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: rgb(4, 0, 255);
+    color: rgb(219, 219, 226);
     text-align: center;
     font-size: 15px;
-    text-shadow: 1px 1px 2px rgb(250, 250, 250), 0 0 1em rgb(207, 206, 206), 0 0 0.2em rgb(233, 233, 233);
+    text-shadow: 2px 2px 20px rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(15, 15, 15);
     
 
 }
@@ -435,13 +459,7 @@ section.footer{
     
     transform: scale(1);
   }
-
-
-
-    
-  
-  
-  
+ 
   .formcontato__send__img {
     width:100px;
     margin-top:-70px;
@@ -473,32 +491,98 @@ Utiliza las referencias de los breakpoints @media abajo */
 
 
 /*Tablet*/
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 
+.video{
+        width: 300%;
+}
 /* Menú */
 
+.tooltiptext{
+    color:var(--cor-de-menu);
+    visibility:visible;
+}
 /*title*/
-
-/*Skills*/
-
-/*Hobbies*/
-
-/*Formación Académica*/
-
-/*Experiencia Profesional*/
-
+.title__container{
+    flex:33%;
+    margin-left:1rem;
 }
 
-/*Mobile*/
-@media (min-width: 425px) {
+.title__epigrafe{
+   font-size: 22px;
+} 
 
-/*Menu*/
+.title__network__container{
+    margin-bottom:0rem;
+}
 
-/*Titulo*/
-
-/*Sección sobre mi*/
 
 /*Skills*/
+.skills__line,.hobbies__line,.academic__courses{
+    flex:33%;
+    justify-content: center;
+}
+
+
+/*Hobbies*/
+/*Formación Académica*/
+/*Experiencia Profesional*/
+.formcontato--esquerda{
+    display:none;
+}
+
+.formcontato__text{
+    width:100%;
+}
+
+.formcontato__img{
+    width:100%;
+    height:100%;
+}
+
+}
+/*Mobile*/
+@media (min-width: 350px) {
+.video{
+    width: 700%;
+}
+/*Menu*/
+.top__button{
+    color:var(--cor-de-link);
+       
+}
+
+.tooltiptext{
+    color:var(--cor-de-menu);
+    visibility:visible;
+}
+/*Titulo*/
+.title__div{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.title__container{
+    text-align: center;
+    margin:0;
+}
+
+/*Sección sobre mi*/
+.about__paragraph{
+    padding-right:15px;
+    padding-left:3px;
+    line-height: 1.2;
+    font-family:'Raleway';
+    text-align: justify; 
+    text-shadow:1px 2px 0px var(--cor-de-link);
+}
+/*Skills*/
+.skills__box__element,.hobbies__box__element{
+    width:100px;
+    height:100px;
+}
+
 
 /*Hobbies*/
  
@@ -507,6 +591,8 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Experiencia Profesional*/
 
  /*Contacto*/
+
+
 
 /*Footer*/
 
